@@ -1,5 +1,4 @@
 import { Injectable } from '@nestjs/common';
-import { CreatePostDto } from './dto/create-post.dto';
 import { UpdatePostDto } from './dto/update-post.dto';
 import { CreateAnotherpostDto } from './dto/create-anotherpost.dto';
 import { Repository } from 'typeorm';
@@ -42,7 +41,7 @@ export class PostService {
   async searchByContent(content: string) {
     return await this.postRepository
       .createQueryBuilder('postcontent')
-      .where('postcontent.content LIKE :content', { content: `%${content}%`}) //바인딩 파라미터 학습.
+      .where('postcontent.content LIKE :content', { content: `%${content}%` }) //바인딩 파라미터 학습.
       .getMany();
   }
 }

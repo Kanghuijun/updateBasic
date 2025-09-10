@@ -10,7 +10,6 @@ import {
   Res,
 } from '@nestjs/common';
 import { PostService } from './post.service';
-import { CreatePostDto } from './dto/create-post.dto';
 import { UpdatePostDto } from './dto/update-post.dto';
 import { CreateAnotherpostDto } from './dto/create-anotherpost.dto';
 import express from 'express';
@@ -35,7 +34,7 @@ export class PostController {
     return {
       message: 'Posts retrieved successfully',
       data: await this.postService.searchByContent(content),
-    }
+    };
   }
   // Create Post
   // Post 메소드는 주로 리소스를 생성할 때 사용
