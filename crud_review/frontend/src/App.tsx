@@ -24,7 +24,7 @@ type UpdatePostDto = {
 
 // --- API 기본 URL ---
 // 백엔드 서버의 주소입니다. 
-const API_BASE_URL = 'http://localhost:3000/post';
+const API_BASE_URL = '/api/post';
 
 // --- 메인 컴포넌트 ---
 const PostTestPage: React.FC = () => {

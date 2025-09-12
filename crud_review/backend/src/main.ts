@@ -4,6 +4,7 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors(); //docker로 키면 0.0.0.0포트
+  app.setGlobalPrefix('api');
   await app.listen(process.env.PORT ?? 3000, '0.0.0.0');
 }
 bootstrap();
